@@ -1,9 +1,13 @@
 In this project we use HC-05 module for communication with robot over Bluetooth.
 The module is quite cheap and well-described on the Internet.
 
-------------SOME ADITIONAL INFO---------------
-***
-***
-**
-***
----------------------------------------------
+------------INFO------------------------------------------------------------
+
+Supply Voltage:		3.3V (connect to pin 3.3) or 5V (connect to pin 5.0)
+Operating Voltage:	3.3V
+Range: 			10m
+Communication:		UART (via RX and TX)
+Default password:	1234
+Dimensions:		37 x 17 mm
+
+----------------------------------------------------------------------------
