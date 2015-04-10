@@ -4,7 +4,7 @@ Kazdy branch bedzie odpowiadal za jedna czesc projektu, tj: bluetooth, silniki
 oraz mpu.
 Pierwsze co to musicie sobie skopiowac aktualna wersje repozytorium do siebie lokalnie.
 Jest to zawsze pierwsza czynnosc ktora wykonujemy zaczynajac prace.
-Robimy to komenda "git clone URL".
+Robimy to komenda "git clone URL" (za pierwszym razem). Potem juz wystarcza "git pull".
 Nastepnie "checkoutujemy" sie na swojego branch'a komenda "git checkout BRANCHNAME".
 Pracujemy, piszemy, rozwalamy mozgi i nastepnie "git add ." doda wszystkie pliki
 do tzw. STAGED AREA. Teraz wystarczy owe pliki tylko "commit'owac", czyli stworzyc
