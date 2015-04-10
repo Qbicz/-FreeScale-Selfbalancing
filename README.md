@@ -16,5 +16,9 @@ Na koncu gdy praca bedzie skonczona (lub wczesniej gdy ktos bedzie pewny tego co
 Komenda "git status" sprawdza aktualny stan plikow.
 Komenda "git log" pokazuje logi.
 
+
+I najwazniejsze: potezny manual mamy tutaj: 
+http://git-scm.com/book/en/v2
+
 # -FreeScale-Selfbalancing
 Source codes for self-balancing robot
