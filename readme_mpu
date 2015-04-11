@@ -3,13 +3,13 @@ MPU is 3-axis gyro, 3-axis accelerometer.
 
 ---------------- INFO -------------------
 
-Supply voltage: 2.3 - 3.4V
-Current: 5mA
-Digital output: I2C @ 400kHz/100kHz
-Logic supply voltage: 1.8V or VDD
-ADC Resolution: 16-bit for each of 6 axes
-Board size: 20.3x12.7x2.5mm
-Mass: 0.9g
+Supply voltage: 	2.3 - 3.4V
+Current: 		5mA
+Digital output: 	I2C @ 400kHz/100kHz
+Logic supply voltage: 	1.8V or VDD
+ADC Resolution: 	16-bit for each of 6 axes
+Board size: 		20.3x12.7x2.5mm
+Mass: 			0.9g
 
 -----------------------------------------
 
