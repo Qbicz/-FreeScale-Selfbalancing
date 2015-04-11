@@ -7,12 +7,25 @@ TxD--------\/ ---------TxD
 RxD--------/\----------RxD
 */
 
-void uart_init (UART_MemMapPtr uartch, int sysclk, int baud)
+
+
+/*Do zrobienia:
+-funkcje inicjuj¹ce piny (chapter 10 ? )
+PORTC_PCR16=PORT_PCR_MUX(3);
+  PORTC_PCR17=PORT_PCR_MUX(3);
+  uart_init(UART3_BASE_PTR,100000000,19200);
+ 
+  UART3_D=0xaa;
+
+
+*/
+
+
+
 /*Parameters:
 uartch 	- channel 
 sysclk 	- UART module clock frequency in kHHz
 baud 	- baudrate for transmission*/
-
 
 void uart_init (UART_MemMapPtr uartch, int sysclk, int baud)
 {
@@ -53,4 +66,26 @@ UART_C4_REG(uartch) = temp | UART_C4_BRFA(brfa);
  
 /* Uruchomienie odbiornika i nadajnika. */
 UART_C2_REG(uartch) |= (UART_C2_TE_MASK | UART_C2_RE_MASK );
+}
+
+char uart_getchar (UART_MemMapPtr channel)
+{
+/* Oczekiwanie na wprowadzenie znaku. */
+while (!(UART_S1_REG(channel) & UART_S1_RDRF_MASK));
+/* Zwrócenie 8-bitowych danych z odbiorniika. */
+	return UART_D_REG(channel);
+}
+
+//sprawdzenie czy jakis znak zostal odebrany (po tej funkcji wywolamy sobie getchar
+int uart_getchar_present (UART_MemMapPtr channel)
+{
+	return (UART_S1_REG(channel) & UART_S1_RDRF_MASK);
+}
+
+void uart_putchar (UART_MemMapPtr channel, char ch)
+{
+/* Oczekiwanie na udostêpnienie przestrzeni w FIFO. */
+while(!(UART_S1_REG(channel) & UART_S1_TDRE_MASK));
+/* Wys³anie znaku. */
+UART_D_REG(channel) = (uint8)ch;
 }
