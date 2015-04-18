@@ -3,8 +3,15 @@ Dzialamy tak, ze kazdy bedzie mial zrobiona swa galaz, tzw. "branch".
 Kazdy branch bedzie odpowiadal za jedna czesc projektu, tj: bluetooth, silniki
 oraz mpu.
 Pierwsze co to musicie sobie skopiowac aktualna wersje repozytorium do siebie lokalnie.
-Jest to zawsze pierwsza czynnosc ktora wykonujemy zaczynajac prace.
+Jest to zawsze pierwsza czynnosc ktora wykonujemy zaczynajac prace. Robimy to, zeby
+potem przy scalaniu naszego brancha do mastera nie wywalalo bledow.
 Robimy to komenda "git clone URL" (za pierwszym razem). Potem juz wystarcza "git pull".
+Jesli master zmienil sie, i chcemy miec w naszym branchu aktualna wersje README itp itd (chcemy miec, zeby nie wyrzucalo bledow
+przy probie mergowania) to po wlaczeniu konsolki robimy:
+1) git checkout branchname 
+2) git merge master
+3) robimy sobie nasza kochana prace, potem commitujemy
+4) git push origin
 Nastepnie "checkoutujemy" sie na swojego branch'a komenda "git checkout BRANCHNAME".
 Pracujemy, piszemy, rozwalamy mozgi i nastepnie "git add ." doda wszystkie pliki
 do tzw. STAGED AREA. Teraz wystarczy owe pliki tylko "commit'owac", czyli stworzyc
