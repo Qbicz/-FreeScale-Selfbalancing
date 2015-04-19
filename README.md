@@ -33,9 +33,13 @@ http://git-scm.com/book/en/v2
 
 
 Obsluga terminala przy polaczeniu szeregowym z Freescale'em (np. w Tera Term)
+
 1) Wgraj plik .bin
+
 2) Odepnij USB i wepnij znowu
+
 3) Wlacz terminal
+
 4) Setup->Terminal->Receive=LF (w Tera Term mozna zapisac ustawienia, zeby nie zmieniac tego za kazdym razem)
 
 
